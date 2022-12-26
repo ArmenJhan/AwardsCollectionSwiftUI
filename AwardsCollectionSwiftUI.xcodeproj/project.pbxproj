@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		C072755B2959F3B900DB7318 /* AwardsCollectionSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C072755A2959F3B900DB7318 /* AwardsCollectionSwiftUIApp.swift */; };
-		C072755D2959F3B900DB7318 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C072755C2959F3B900DB7318 /* ContentView.swift */; };
 		C072755F2959F3BA00DB7318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C072755E2959F3BA00DB7318 /* Assets.xcassets */; };
 		C07275622959F3BA00DB7318 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07275612959F3BA00DB7318 /* Preview Assets.xcassets */; };
+		C07275692959F47D00DB7318 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07275682959F47D00DB7318 /* StarterView.swift */; };
+		C072756B2959F4CC00DB7318 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C072756A2959F4CC00DB7318 /* MainView.swift */; };
+		C072756D2959F58800DB7318 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C072756C2959F58800DB7318 /* AwardsView.swift */; };
+		C072756F2959F77C00DB7318 /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C072756E2959F77C00DB7318 /* PathView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C07275572959F3B900DB7318 /* AwardsCollectionSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwardsCollectionSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C072755A2959F3B900DB7318 /* AwardsCollectionSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsCollectionSwiftUIApp.swift; sourceTree = "<group>"; };
-		C072755C2959F3B900DB7318 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C072755E2959F3BA00DB7318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C07275612959F3BA00DB7318 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C07275682959F47D00DB7318 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
+		C072756A2959F4CC00DB7318 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C072756C2959F58800DB7318 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		C072756E2959F77C00DB7318 /* PathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				C072755A2959F3B900DB7318 /* AwardsCollectionSwiftUIApp.swift */,
-				C072755C2959F3B900DB7318 /* ContentView.swift */,
+				C07275682959F47D00DB7318 /* StarterView.swift */,
+				C072756A2959F4CC00DB7318 /* MainView.swift */,
+				C072756C2959F58800DB7318 /* AwardsView.swift */,
+				C072756E2959F77C00DB7318 /* PathView.swift */,
 				C072755E2959F3BA00DB7318 /* Assets.xcassets */,
 				C07275602959F3BA00DB7318 /* Preview Content */,
 			);
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C072755D2959F3B900DB7318 /* ContentView.swift in Sources */,
+				C072756F2959F77C00DB7318 /* PathView.swift in Sources */,
+				C072756B2959F4CC00DB7318 /* MainView.swift in Sources */,
+				C072756D2959F58800DB7318 /* AwardsView.swift in Sources */,
 				C072755B2959F3B900DB7318 /* AwardsCollectionSwiftUIApp.swift in Sources */,
+				C07275692959F47D00DB7318 /* StarterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +285,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +295,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.armen.AwardsCollectionSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +318,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +328,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.armen.AwardsCollectionSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
