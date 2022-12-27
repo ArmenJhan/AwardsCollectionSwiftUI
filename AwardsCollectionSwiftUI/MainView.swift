@@ -25,7 +25,7 @@ struct MainView: View {
             if isShowing {
                 PathView()
                     .frame(width: 200, height: 200)
-                    .transition(.slide)
+                    .transition(.animation)
             }
             
             Spacer()
@@ -38,6 +38,31 @@ struct MainView: View {
         withAnimation {
             isShowing.toggle()
         }
+    }
+}
+
+extension AnyTransition {
+    static var animation: AnyTransition {
+        
+        let insertion = AnyTransition.slide
+            .combined(
+                with: .scale.combined(
+                    with: .opacity.combined(
+                        with: .move(edge: .top)
+                    )
+                )
+            )
+        
+        let removal = AnyTransition.slide
+            .combined(
+                with: .scale.combined(
+                    with: .opacity.combined(
+                        with: .move(edge: .top)
+                    )
+                )
+            )
+        
+        return .asymmetric(insertion: insertion, removal: removal)
     }
 }
 
